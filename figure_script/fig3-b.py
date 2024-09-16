@@ -1,27 +1,22 @@
 import argparse
-import json
-import logging
 import os
-os.environ['CUDA_VISIBLE_DEVICES'] = '2'
 import torch
 import torch.optim
 import models
-import optimizers.regularizers as regularizers
 from datasets.kg_dataset import KGDataset
 from models import all_models
-from optimizers.kg_optimizer import KGOptimizerEuluc
-from utils.train import get_savedir, avg_both, format_metrics, count_params, avg_metrics
 import numpy as np
 from sklearn.manifold import TSNE
 import matplotlib.pyplot as plt
-import matplotlib
 import matplotlib.font_manager as fm
-import matplotlib.cm as cm
 import seaborn as sns
+
 myfont = fm.FontProperties(fname='/usr/share/fonts/truetype/arphic/ukai.ttc')
 sns.set(font=myfont.get_name())
 sns.set_style("whitegrid",{"font.sans-serif":['simhei', 'Arial']})
-DATA_PATH = './data_euluc'
+
+DATA_PATH = './data'
+
 label_chinese_map = {
     '101': "居民地",
     '201': "商业办公区",
@@ -52,6 +47,7 @@ label_eng_map = {
     '800': "Water",
     '401': "Road",
 }   
+
 def set_random():
     torch.manual_seed(8923)
     torch.cuda.manual_seed(8923)
@@ -89,11 +85,6 @@ def get_test_vis(args, experiment=0):
     wrong_examples = np.concatenate((wrong_examples, wrong_label.reshape(-1, 1)), axis=1)
     # 使用idx2eulucclass映射
     wrong_examples = np.vectorize(idx2entity.get)(wrong_examples)
-    
-    # 写入文件
-    # with open("./test_vis/{}_{}_wrong_examples.txt".format(args.dataset, args.model), 'w') as f:
-    #     for line in wrong_examples:
-    #         f.write(" ".join(line) + "\n")
     
     category_embedding = {}
     for key, value in idx2eulucclass.items():
@@ -190,12 +181,10 @@ if __name__ == "__main__":
         os.makedirs(save_dir)
     exp_times = 1
     # for model in ["VecS_4", "TransE", "GIE", "MurE", "RotE", "RefE", "AttE", "RotH", "RefH", "AttH", "ComplEx"]:
-    for model in ["VecS_4", "GIE", "TransE"]:
+    for model in ["VecS_4"]:
         for dataset in ["GUANGZHOU", "WUHAN", "SHANGHAI", "LANZHOU", "YULIN"]:
-        # for dataset in ["SHANGHAI"]:
             args = parser.parse_args(["--dataset", dataset, "--multi_c", "--model", model])
             args.best_model_path = "/media/dell/DATA/wy/code/CUKG/UrbanKG_Embedding_Model/logs_euluc/logs_normal/{}/{}/experiment_0/model.pt".format(model, dataset)
-            # args.best_model_path = "/media/dell/DATA/wy/code/graph-learning/CUKG/UrbanKG_Embedding_Model/logs/VecS_2/{}/experiment_0/model.pt".format(dataset)
             if model in ["ComplEx", "RotatE"]:
                 args.optimizer = "SparseAdam"
             metrics_list = []
@@ -222,12 +211,10 @@ if __name__ == "__main__":
                 keys = list(category_embeddings.keys())
                 keys = sorted(keys)
                 
-                
                 myfont = fm.FontProperties(fname='/usr/share/fonts/truetype/arphic/ukai.ttc')
                 sns.set(font=myfont.get_name())
                 sns.set_style("whitegrid",{"font.sans-serif":['simhei', 'Arial']})
                 
-                # corlor = cm.rainbow(np.linspace(0, 1, len(label_eng_map.keys())))
                 corlor_map = {
                     '101': '#fcecb6',
                     '201': '#f4c1bf',

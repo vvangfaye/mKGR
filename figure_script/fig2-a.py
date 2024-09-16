@@ -22,10 +22,6 @@ def plot_confusion_matrix(cm_path, save_path):
 
     # plot the confusion matrix, 保留两位小数, 选择color map, 选择图例长度，隐藏true label, 颜色条范围为0-1， 颜色为RdPu
     fig, ax = plt.subplots(figsize=(1.5, 1.5))
-    # 手动绘制混淆矩阵
-    # for i in range(confusion_matrix.shape[0]):
-    #     for j in range(confusion_matrix.shape[1]):
-    #         ax.text(j, i, f"{confusion_matrix[i, j]:.2f}", ha="center", va="center", color="black")
 
     # 设置颜色
     ax.imshow(confusion_matrix, cmap="RdPu", vmin=0, vmax=1)
@@ -77,24 +73,9 @@ def plot_confusion_matrix(cm_path, save_path):
     # save the confusion matrix as SVG with editable text and Arial font
     fig.savefig(save_path, format='pdf', bbox_inches='tight')
 
-# result_dir_2023 = "/media/dell/DATA/wy/code/graph-learning/CUKG/UrbanKG_Embedding_Model/logs/VecS_2/predict_shp/"
-# xlsx_list = os.listdir(result_dir_2023)
-# xlsx_list = [os.path.join(result_dir_2023, xlsx) for xlsx in xlsx_list if xlsx.endswith(".xlsx")]
-#
-# for xlsx in xlsx_list:
-#     save_path = xlsx.replace(".xlsx", ".svg")
-#     plot_confusion_matrix(xlsx, save_path)
+result_dir = "/media/dell/DATA/wy/code/CUKG/UrbanKG_Embedding_Model/logs/logs/VecS_4/predict_shp_0"
 
-# new test visualization
-# "/media/dell/DATA/wy/data/nature_data/mid_data/all_data/2023/output_data/result_cnn_0/"
-# '/media/dell/DATA/wy/data/nature_data/mid_data/all_data/2023/output_data/result_svm_0/'
-# '/media/dell/DATA/wy/data/nature_data/mid_data/all_data/2023/output_data/result_rf_0/'
-# '/media/dell/DATA/wy/data/nature_data/mid_data/all_data/2023/output_data/all_train/GCN/'
-# '/media/dell/DATA/wy/data/nature_data/mid_data/all_data/2023/cell/'
-# '/media/dell/DATA/wy/code/CUKG/UrbanKG_Embedding_Model/logs/logs/VecS_4/predict_shp_0/'
-# '/media/dell/DATA/wy/data/nature_data/mid_data/5_city/2023/cat'
-result_dir_2023 = '/media/dell/DATA/wy/data/nature_data/mid_data/5_city/2023/nwpu'
-for root, dirs, files in os.walk(result_dir_2023):
+for root, dirs, files in os.walk(result_dir):
     for file in files:
         if file.endswith(".xlsx"):
             xlsx = os.path.join(root, file)

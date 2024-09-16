@@ -223,16 +223,3 @@ if __name__ == '__main__':
     df = pd.DataFrame(matrix)
     pa, ua, oa = calculate_accuracies(matrix)
     print("All mean producers_accuracy:{}, mean users_accuracy:{}, overall_accuracy:{}".format(pa, ua, oa))
-    # save matrix to xlsx
-    # file_name = '/home/faye/DATA/nature/mid_data/all_data_pr/2023/result_split/武汉市.xlsx'
-    # matrix_df = pd.DataFrame(matrix)
-    # with pd.ExcelWriter(file_name) as writer:
-    #     matrix_df.to_excel(writer, sheet_name='confusion_matrix')
-    # combine_shp(cell_dir, cell_dir + 'all.shp')
-    # matrix = overlapEvaluate_geo(
-    #     '/media/dell/DATA/wy/data/nature_data/mid_data/all_data/2023/label/2023_chinese_label.shp',
-    #     os.path.join(cell_dir, 'all.shp'))
-    # pa, ua, oa = calculate_accuracies(matrix)
-    # print("all mean producers_accuracy:{}, mean users_accuracy:{}, overall_accuracy:{}".format(pa, ua, oa))
-        # 写入excel
-        # save_to_excel(matrix, pa, ua, oa, os.path.join(predict_dir, 'all_result.xlsx'))
