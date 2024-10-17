@@ -22,6 +22,7 @@ data
 **/*.dbf
 **/*.prj
 **/*.cpg
+**/*.qmd
 **/*.geojson
 **/*.csv
 **/*.log
