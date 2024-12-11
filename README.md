@@ -25,7 +25,18 @@ Option 2：Construct the graph in the [KG_construction](./KG_construction/) fold
 
 Train the graph embedding in the [KG_embedding](./KG_embedding/) folder and infer to obtain the land-use mapping result. 
 
-We have published the land-use mapping results of China in [ArcGIS Online](https://www.geosceneonline.cn/geoscene/apps/mapviewer/index.html?webmap=ad747de4b4ad4b558141c638e23960ca).
 
+## Ohter Code
+
+ [figure_script](./figure_script/): The code for generating the figures in the paper.
+
+ [landuse_app](./landuse_app/): The code for 15-minute city application of land-use mapping results.
+
+
+## The reuslt of our mKGR and its application
+
+![result](./images/china_result.jpg)
+
+We have published the land-use mapping results of China in [ArcGIS Online](https://www.geosceneonline.cn/geoscene/apps/mapviewer/index.html?webmap=ad747de4b4ad4b558141c638e23960ca).
 ## Contact
-If you have any questions about it, please let me know. (📧 email: wangfaye@whu.edu.cn)
+If you have any questions about it, please let me know. (Create an 🐛 issue or 📧 email: wangfaye@whu.edu.cn)

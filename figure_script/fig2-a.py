@@ -73,7 +73,7 @@ def plot_confusion_matrix(cm_path, save_path):
     # save the confusion matrix as SVG with editable text and Arial font
     fig.savefig(save_path, format='pdf', bbox_inches='tight')
 
-result_dir = "/media/dell/DATA/wy/code/CUKG/UrbanKG_Embedding_Model/logs/logs/VecS_4/predict_shp_0"
+result_dir = "/home/wangyu/code/mKGR/comparison/predicted_shapefiles_rf_15"
 
 for root, dirs, files in os.walk(result_dir):
     for file in files:
