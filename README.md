@@ -36,6 +36,7 @@ Train the graph embedding in the [KG_embedding](./KG_embedding/) folder and infe
 ## The reuslt of our mKGR and its application
 
 ![result](./images/china_result.jpg)
+**a**, The samples are distributed across various regions of China. From i to v are Beijing, Suzhou, Zhengzhou, Chengdu, and Shenzhen respectively. At the same time, it shows the different OA in each province of China. **b**, An application case for inclusive 15-minute walkability assessment. The shortest walking time from each residential parcel to other land-use categories are calculated and the average walkability values are visualized.
 
 We have published the land-use mapping results of China in [ArcGIS Online](https://www.geosceneonline.cn/geoscene/apps/mapviewer/index.html?webmap=ad747de4b4ad4b558141c638e23960ca).
 ## Contact
