@@ -4,6 +4,10 @@ The official code of paper **Learning to Reason over Multi-Granularity Knowledge
 
 **Abstract:** In mKGR, we introduce the concept of multi-granularity knowledge graph (MGKG) tailored for the ufrban landscape. Leveraging the flexibility of MGKG, mKGR seamlessly integrates multimodal geospatial data, aggregating them into varying granularity entities within the knowledge graph. Subsequently, considering the real world contains certain noise, we develop a fault-tolerance knowledge graph embedding method to complete the graph. The completed knowledge graph finally yields the land-use mapping result.
 
+- [x] Products: Publicly available in [ArcGIS Online](https://www.geosceneonline.cn/geoscene/apps/mapviewer/index.html?webmap=ad747de4b4ad4b558141c638e23960ca).
+- [x] Code: Publicly available in this rep.
+- [x] Dataset: To be released upon paper publication (Email for access).
+
 **Method's framework**
 ![framework](./images/framework.jpg)
 
