@@ -6,7 +6,7 @@ The official code of paper **Learning to Reason over Multi-Granularity Knowledge
 
 - [x] Products: Publicly available in [ArcGIS Online](https://www.geosceneonline.cn/geoscene/apps/mapviewer/index.html?webmap=ad747de4b4ad4b558141c638e23960ca).
 - [x] Code: Publicly available in this rep.
-- [x] Dataset: To be released upon paper publication (Email for access).
+- [ ] Dataset: To be released upon paper publication (Email for access).
 
 **Method's framework**
 ![framework](./images/framework.jpg)
