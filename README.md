@@ -30,7 +30,7 @@ Option 2：Construct the graph in the [KG_construction](./KG_construction/) fold
 Train the graph embedding in the [KG_embedding](./KG_embedding/) folder and infer to obtain the land-use mapping result. 
 
 
-## Ohter Code
+## Other Code
 
  [figure_script](./figure_script/): The code for generating the figures in the paper.
 
