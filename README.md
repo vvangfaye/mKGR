@@ -8,9 +8,6 @@ The official code of paper **Learning to Reason over Multi-Granularity Knowledge
 - [x] Code: Publicly available in this repository.
 - [ ] Dataset: Restricted access on [Zenodo](https://zenodo.org/records/11311869) (to be released upon paper publication; email us for early access).
 
-**Method's framework**
-![framework](./images/framework.png)
-
 ## Requirement
 Ubuntu 20.04 (or other Linux distribution), one GPU (video memory greater than 12GB and support cuda)
 * python>=3.11.5
@@ -35,12 +32,6 @@ Train the graph embedding in the [KG_embedding](./KG_embedding/) folder and infe
  [figure_script](./figure_script/): The code for generating the figures in the paper.
 
  [landuse_app](./landuse_app/): The code for 15-minute city application of land-use mapping results.
-
-
-## The reuslt of our mKGR and its application
-
-![result](./images/china_result.png)
-**a**, The samples are distributed across various regions of China. From i to v are Beijing, Suzhou, Zhengzhou, Chengdu, and Shenzhen respectively. At the same time, it shows the different OA in each province of China. **b**, An application case for inclusive 15-minute walkability assessment. The shortest road path from each residential parcel to other land-use types are calculated and the average walkability time is visualized.
 
 We have published the land-use mapping and 15-minute walkability results of China on [ArcGIS Online](https://www.geosceneonline.cn/geoscene/apps/mapviewer/index.html?webmap=ad747de4b4ad4b558141c638e23960ca).
 ## Contact
