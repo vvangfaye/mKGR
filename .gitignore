@@ -17,18 +17,6 @@ result
 **/*.zip
 gpt
 data
-**/*.shp
-**/*.shx
-**/*.dbf
-**/*.prj
-**/*.cpg
-**/*.qmd
-**/*.qix
-**/*.geojson
-**/*.csv
-**/*.log
-**/*.feather
-**/*.pdf
 
 **.DS_Store
 
