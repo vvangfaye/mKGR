@@ -2,6 +2,8 @@
 
 The official code of paper **Learning to Reason over Multi-Granularity Knowledge Graph for Zero-shot Urban Land-Use Mapping**.
 
+![image](./framework.png)
+
 **Abstract:** This paper introduces a multi-granularity knowledge graph reasoning (mKGR) framework. Only with indirect supervision from other tasks, mKGR can automatically integrate multimodal geospatial data as varying granularity entities and rich spatial-semantic interaction relationships. Subsequently, mKGR incorporates a novel fault-tolerant knowledge graph embedding method to establish relationships between geographic units and land-use categories, thereby reasoning land-use mapping outcomes. Extensive experiments demonstrate that mKGR not only outperforms existing zero-shot approaches but also exceeds those with direct supervision. Furthermore, this paper reveals the superiority of mKGR in large-scale holistic reasoning, an essential aspect of land-use mapping. Benefiting from mKGR's zero-shot classification and large-scale holistic reasoning capabilities, a comprehensive urban land-use map of China is generated with low-cost.
 
 - [x] Products: Publicly accessible on [ArcGIS Online](https://www.geosceneonline.cn/geoscene/apps/mapviewer/index.html?webmap=ad747de4b4ad4b558141c638e23960ca).
@@ -24,8 +26,9 @@ Option 2：Construct the graph in the [KG_construction](./KG_construction/) fold
 
 ## MGKG Reasoning for Land-use Mapping
 
-Train the graph embedding in the [KG_embedding](./KG_embedding/) folder and infer to obtain the land-use mapping result. 
+Train the graph embedding in the [KG_embedding](./KG_embedding/) folder and infer to obtain the land-use mapping result.
 
+![image](./china_result.png)
 
 ## Other Code
 
