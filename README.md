@@ -9,7 +9,7 @@ The official code of *Remote Sensing of Environment* paper **Learning to Reason 
 - [x] Products: Publicly accessible on [ArcGIS Online](https://www.geosceneonline.cn/geoscene/apps/mapviewer/index.html?webmap=ad747de4b4ad4b558141c638e23960ca), download the products on [Zenodo](https://zenodo.org/records/11311869).
 - [x] Code: Publicly available in this repository.
 - [x] Dataset: Publicly available on [Zenodo](https://zenodo.org/records/11311869).
-
+- [ ] Paper and Docs: The detailed operational documentation will be provided after the article is published.
 ## Requirement
 Ubuntu 20.04 (or other Linux distribution), one GPU (video memory greater than 12GB and support cuda)
 * python>=3.11.5
