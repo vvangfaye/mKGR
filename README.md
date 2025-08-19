@@ -1,6 +1,6 @@
 # mKGR
 
-The official code of *Remote Sensing of Environment* paper **Learning to Reason over Multi-Granularity Knowledge Graph for Zero-shot Urban Land-Use Mapping**.
+The official code of *Remote Sensing of Environment* paper **[Learning to Reason over Multi-Granularity Knowledge Graph for Zero-shot Urban Land-Use Mapping](https://www.sciencedirect.com/science/article/pii/S0034425725003657)**.
 
 ![image](./images/framework.png)
 
