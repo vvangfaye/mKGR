@@ -9,6 +9,7 @@ The official code of *Remote Sensing of Environment* paper **[Learning to Reason
 - [x] Products: Publicly accessible on [ArcGIS Online](https://www.geosceneonline.cn/geoscene/apps/mapviewer/index.html?webmap=ad747de4b4ad4b558141c638e23960ca), download the products on [Zenodo](https://zenodo.org/records/11311869).
 - [x] Code: Publicly available in this repository.
 - [x] Dataset: Publicly available on [Zenodo](https://zenodo.org/records/11311869).
+- [x] Data-processing pipeline: Fully open-sourced. The complete preprocessing (raw geospatial data → per-city shapefiles + seed labels) is in [KG_pre](./KG_pre/), with the nationwide reproduction data on [Zenodo](https://zenodo.org/records/11311869).
 
 Ubuntu 20.04 (or other Linux distribution), one GPU (video memory greater than 12GB and support cuda)
 * python>=3.11.5
@@ -17,15 +18,22 @@ Ubuntu 20.04 (or other Linux distribution), one GPU (video memory greater than 1
 * pandas>=2.2.2
 * geopandas>=0.14.0
 
-## MGKG Construction
+## Pipeline
 
-Option 1: Directly download the [constructed graph](https://zenodo.org/records/11311869).
+Three stages; the output of each is the input of the next. See each folder's README to run it.
 
-Option 2：Construct the graph in the [KG_construction](./KG_construction/) folder.
+| Stage | Folder | Role |
+|---|---|---|
+| 1 | [KG_pre](./KG_pre/) | raw geospatial data → per-city shapefiles + seed labels |
+| 2 | [KG_construction](./KG_construction/) | shapefiles → MGKG triplets, id maps, train/valid/test/predict splits |
+| 3 | [KG_embedding](./KG_embedding/) | train the fault-tolerant embedding, infer land-use, export result shapefiles |
 
-## MGKG Reasoning for Land-use Mapping
+Ready artifacts on [Zenodo](https://zenodo.org/records/11311869) — pick where to start:
 
-Train the graph embedding in the [KG_embedding](./KG_embedding/) folder and infer to obtain the land-use mapping result.
+- `KnowledgeGraph.zip` (5 cities) — the constructed MGKG; start at **stage 3**.
+- `OriShapefile.zip` (5 cities) — per-city shapefiles; start at **stage 2**.
+- `NationalKGpreReproduction.zip` (nationwide, 366 cities) — geometry layers to reproduce **stage 1**.
+- `ChinaLandUse.gpkg` / `China15min.gpkg` — the final products.
 
 ![image](./images/china_result.png)
 
