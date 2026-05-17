@@ -10,7 +10,7 @@ One dataset per city under `./data/<CITY>/` (UPPERCASE pinyin). From the
 `KG_construction` bridge it contains `entity2id.txt`, `relation2id.txt`, and
 extensionless `train valid test predict`. `WUHAN/GUANGZHOU/LANZHOU/SHANGHAI/YULIN`
 are included as references; `KnowledgeGraph.zip` on
-[Zenodo](https://zenodo.org/records/11311869) provides this directly (skip
+[Zenodo](https://zenodo.org/records/20255618) provides this directly (skip
 stages 1–2).
 
 ## Run

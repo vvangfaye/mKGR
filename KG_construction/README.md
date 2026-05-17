@@ -2,7 +2,7 @@
 
 Builds the multi-granularity knowledge graph from the per-city shapefiles
 (from [`KG_pre`](../KG_pre/) or `OriShapefile.zip` on
-[Zenodo](https://zenodo.org/records/11311869)) and emits the id maps and the
+[Zenodo](https://zenodo.org/records/20255618)) and emits the id maps and the
 train/valid/test/predict splits that [`KG_embedding`](../KG_embedding/) trains on.
 
 ## Entity naming (paper ↔ code)
